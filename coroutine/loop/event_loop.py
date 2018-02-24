@@ -1,12 +1,12 @@
 # -*- coding:utf-8 -*-
-import collections
-import errno
-import functools
-import heapq
-import itertools
 import os
-import select
 import time
+import errno
+import heapq
+import select
+import functools
+import itertools
+import collections
 
 from ..components.waker import Waker
 from ..components.future import Future

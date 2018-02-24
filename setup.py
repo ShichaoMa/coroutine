@@ -13,20 +13,20 @@ AUTHOR_EMAIL = "cnaafhvk@foxmail.com"
 
 URL = "https://www.github.com/ShichaoMa/toolkit"
 
-NAME = "toolkity"
+NAME = "coroutine"
 
-DESCRIPTION = "simple function tools. "
+DESCRIPTION = "simple coroutine event loop. "
 
 try:
     LONG_DESCRIPTION = open("README.rst").read()
 except UnicodeDecodeError:
     LONG_DESCRIPTION = open("README.rst", encoding="utf-8").read()
 
-KEYWORDS = "tools function"
+KEYWORDS = "coroutine event loop"
 
 LICENSE = "MIT"
 
-PACKAGES = ["toolkit", "toolkit.translator", "toolkit.tornado"]
+PACKAGES = ["coroutine", "coroutine.components", "coroutine.loop"]
 
 setup(
     name=NAME,
@@ -45,7 +45,7 @@ setup(
     url=URL,
     license=LICENSE,
     packages=PACKAGES,
-    install_requires=["python-json-logger", "redis", "kafka-python", "requests"],
+    install_requires=[],
     include_package_data=True,
     zip_safe=True,
 )

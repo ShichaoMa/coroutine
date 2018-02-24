@@ -55,8 +55,8 @@ class GeneratorAdapter(object):
         generator = GeneratorAdapter(generator)
         在python3.3以后的版本，正常使用yield from
         对于之前的版本，使用yield返回一个生成器的效果与yield from相同
-        对于低版本中生成器中的return 关键字不能使用的问题，使用Return方法代替。
-        对于高版本python,你甚至可以混写yield和yield from。没有任何区别
+        对于低版本中生成器中的return 关键字不能使用的问题，使用Return函数代替。
+        对于高版本python,你甚至可以混写yield和yield from，以及混写Return和return。没有任何区别
     """
     def __init__(self, root):
         self.current_node = Node(root)

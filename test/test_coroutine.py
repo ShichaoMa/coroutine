@@ -1,5 +1,3 @@
-import sys
-sys.path.insert(0, "..")
 import socket
 from coroutine import EventLoop, sleep, coroutine, get_buffer, Return
 
@@ -73,4 +71,3 @@ if __name__ == "__main__":
     print(coroutine3.result())
     print(coroutine4.result())
     print(coroutine5.result())
-

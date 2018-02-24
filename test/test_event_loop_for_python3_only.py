@@ -73,11 +73,3 @@ if __name__ == "__main__":
     print(coroutine3.result())
     print(coroutine4.result())
     print(coroutine5.result())
-
-    # from toolkit import debugger
-    # debugger()
-    # def fun(a, b, c):
-    #     yield 1
-    #     return a + b + c
-    # cls = coroutine(fun)
-    # print(cls)
