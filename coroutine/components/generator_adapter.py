@@ -65,11 +65,11 @@ class GeneratorAdapter(object):
         try:
             yielded = self.current_node.send(result)
             # 如果yield值是生成器或者协程，则创建子节点并将当前结点指向子节点，并预激
-            while isinstance(yielded, (Generator, Coroutine)):
+            if isinstance(yielded, (Generator, Coroutine)):
                 child = Node(yielded, self.current_node)
                 self.current_node.append(child)
                 self.current_node = child
-                yielded = yielded.send(None)
+                yielded = self.send(None)
             # 否则返回当前的yield值。
             return yielded
         except (StopIteration, GeneratorExit) as e:

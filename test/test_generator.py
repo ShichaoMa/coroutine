@@ -14,8 +14,10 @@ def bar():
     c = yield 333
     print("Got c: ", c)
     d = yield fun()
-    print("Got d: ", c)
-    Return(c + d)
+    print("Got d: ", d)
+    e = yield fun()
+    print("Got e", e)
+    Return(c + d + e)
 
 #
 # def yield_from_bar():
@@ -31,6 +33,8 @@ def test_only_yield():
     print("Got 333", co.send(None))
     print("Got 111", co.send(3))
     print("Got 222", co.send(1))
+    print("Got 111", co.send(6))
+    print("Got 222", co.send(5))
     try:
         co.send(2)
     except StopIteration as e:
