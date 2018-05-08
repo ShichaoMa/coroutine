@@ -85,4 +85,5 @@ class GeneratorAdapter(object):
         return self.current_node.throw(typ, val, tb)
 
     def __iter__(self):
-        return iter(self.current_node)
+        while True:
+            yield self.send(None)
